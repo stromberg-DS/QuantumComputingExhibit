@@ -39,7 +39,9 @@ void draw() {
     my = my + (mouseY- my) * easing;
   }
   int magColor = get(mouseX, mouseY);
-  fill(magColor);
+  
+  //Below maxes the brightness but doesn't get to white
+  fill(hue(magColor), saturation(magColor), slideValue);
   //square(mouseX - 150, mouseY - 150, 300);
   mx = constrain(mx, inner, width - inner);
   my = constrain(my, inner, height - inner);
