@@ -38,6 +38,7 @@ void draw() {
   if (abs(mouseY - my) > 0.01) {
     my = my + (mouseY- my) * easing;
   }
+  
   int magColor = get(mouseX, mouseY);
   
   //Below maxes the brightness but doesn't get to white
@@ -49,6 +50,7 @@ void draw() {
   //rect(edge, edge, width-edge, height-edge);
    
   square(mx - 150, my - 150, 300);
+  
 }
 
 void serialEvent(Serial myPort) {
